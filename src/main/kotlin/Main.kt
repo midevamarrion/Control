@@ -6,11 +6,19 @@ println(maneno(arrayOf("Mario","angel","Nakakande","violet","Yvonne")))
     robot(13)
     robot(20)
     nambari()
+    println(mixedTypes(arrayOf(2.5,56.8,"Hello",34,50,1.55,10,true,)))
 }
 //Write a function that takes in an array of mixed types and returns the sum of the decimal element
-fun mixed(){
-    var sentence= arrayOf(12,"hello",34.5,33.2F,55,71,12.8,"Marrion")
-}
+fun mixedTypes(num:Array<Any>):Double{
+    var sentence = 0.00
+    for (x in num) {
+        if (x is Double) {
+            sentence +=x
+        }
+    }
+    return sentence
+ }
+
 //Create a function that prints out all the odd numbers between 1 and 100
 fun number(num:Int) {
     for (num in 1..100)
